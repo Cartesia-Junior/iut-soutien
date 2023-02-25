@@ -21,12 +21,9 @@
 <body>
 	<header class="main-header">
 		<img class="logo">
-		<a id="header-project-name" class="project-name"
-			href="index.html">La Bonne
-			Note</a>
-		<a id="header-join-button" class="button full-color"
-					   href="rejoindre.html"><span
-						   class="desktop-only">Nous </span>Rejoindre</a>
+		<a id="header-project-name" class="project-name" href="index.html">La Bonne Note</a>
+		<a id="header-join-button" class="button full-color" href="rejoindre.html"><span
+				class="desktop-only">Nous </span>Rejoindre</a>
 		<label class="burger" for="nav-checkbox-toggle">
 			<svg viewBox='0 0 10 8' width='40'>
 				<path d='M1 1h8M1 4h 8M1 7h8' stroke-width='1' stroke-linecap='round' />
@@ -43,21 +40,27 @@
 		</nav>
 	</header>
 	<main>
-		<section id="introduction" class="introduction">
-			<div class="introduction intro-div">
-			<h2> Accompagner des primaires ! </h2>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-				been the industry's standard dummy text ever since the 1500s, when an unknown printer
-				took a galley of type and scrambled it to make a type specimen book. It has survived not
-				only five centuries, but also the leap into electronic typesetting, remaining
-				essentially unchanged. It was popularised in the 1960s with the release of Letraset
-				sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-				software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			<a class="button full-width intro-join" href="rejoindre.html">Rejoindre</a>
+		<section id="introduction" class="introduction flex-wrap">
+			<div class="flex-wrap intro-div">
+				<h2> Accompagner des primaires ! </h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+					Ipsum has
+					been the industry's standard dummy text ever since the 1500s, when an unknown
+					printer
+					took a galley of type and scrambled it to make a type specimen book. It has
+					survived not
+					only five centuries, but also the leap into electronic typesetting, remaining
+					essentially unchanged. It was popularised in the 1960s with the release of
+					Letraset
+					sheets containing Lorem Ipsum passages, and more recently with desktop
+					publishing
+					software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<a class="button full-width intro-join
+					  desktop-small" href="rejoindre.html">Rejoindre</a>
 			</div>
 			<img class="section-thumbnail"
-			src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
-			alt="Une classe d'enfants qui étudient">
+				src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+				alt="Une classe d'enfants qui étudient">
 		</section>
 		<section id="presentation" class="presentation">
 			<h2>La Bonne Note</h2>
@@ -126,22 +129,28 @@
 			<a class="button full-color" href="rejoindre.html">Rejoindre</a>
 		</section>
 		<section id="contact" class="contact">
-			<h2>Contact</h2>
-			<form
-					action="mailto:TEMPORARY@EMAIL.com?subject=Formulaire%20de%20contact"
+			<h2 class="full-width">Nous contacter</h2>
+			<form class="flex-wrap" action="mailto:TEMPORARY@EMAIL.com?subject=Formulaire%20de%20contact"
 				method="post" enctype="text/plain">
-				<label for="nom">Nom</label>
-				<input type="text" id="nom" name="Nom">
-				<label for="prenom">Prénom</label>
-				<input type="text" id="prenom" name="Prénom">
-				<label for="email">Email</label>
-				<input type="email" id="email"
-				name="Email">
-				<label for="contenu">Contenu</label>
-				<textarea id="contenu" name="Message" rows="5">
-				</textarea>
+				<div class="flex-wrap">
+					<label for="nom">Nom</label>
+					<input type="text" id="nom" name="Nom">
+					<label for="prenom">Prénom</label>
+					<input type="text" id="prenom" name="Prénom">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="Email">
+				</div>
+				<div class="flex-wrap">
+					<label for="contenu">Contenu</label>
+					<textarea id="contenu" name="Message"></textarea>
+				</div>
+
+				<!-- lazy workaround to get -->
+				<!-- the button to be small on desktop -->
+				<div class="break"></div>
+
 				<button type="submit" class="button full-color
-					full-width">Envoyer</button>
+					full-width desktop-small">Envoyer</button>
 			</form>
 		</section>
 	</main>
