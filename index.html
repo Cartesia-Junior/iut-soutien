@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>La Bonne Note</title>
+	<title>Soutient Scolaire IUT</title>
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -16,12 +16,23 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Quicksand:wght@500&display=swap"
 		rel="stylesheet">
 
+	 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+	     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+	     crossorigin=""></script>
+
+	 <script src="js/leaflet.js"></script>
 </head>
 
-<body>
+<body onload="leaflet()">
 	<header class="main-header">
-		<img class="logo">
-		<a id="header-project-name" class="project-name" href="index.html">La Bonne Note</a>
+		<img class="logo" src="assets/svg/CrayonLea.svg" alt="Logo du
+		projet: Une illustration d'un crayon classique">
+		<a id="header-project-name" class="project-name" href="index.html">Soutient Scolaire IUT</a>
 		<a id="header-join-button" class="button full-color" href="rejoindre.html"><span
 				class="desktop-only">Nous </span>Rejoindre</a>
 		<label class="burger" for="nav-checkbox-toggle">
@@ -43,92 +54,76 @@
 		<section id="introduction" class="introduction flex-wrap">
 			<div class="flex-wrap intro-div">
 				<h2> Accompagner des primaires ! </h2>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-					Ipsum has
-					been the industry's standard dummy text ever since the 1500s, when an unknown
-					printer
-					took a galley of type and scrambled it to make a type specimen book. It has
-					survived not
-					only five centuries, but also the leap into electronic typesetting, remaining
-					essentially unchanged. It was popularised in the 1960s with the release of
-					Letraset
-					sheets containing Lorem Ipsum passages, and more recently with desktop
-					publishing
-					software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<p>Vous adhérez à nos principes et vous avez
+				envie de tranmettre vos connaissances pour
+				participer à l'égalité des chances à l'école ?
+
+				Étudiants de l'IUT de Paris Rives de Seine,
+				rejoignez nous!</p>
 				<a class="button full-width intro-join
-					  desktop-small" href="rejoindre.html">Rejoindre</a>
+					  desktop-small"
+					  href="rejoindre.html">Nous rejoindre</a>
 			</div>
 			<img class="section-thumbnail"
 				src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
 				alt="Une classe d'enfants qui étudient">
 		</section>
 		<section id="presentation" class="presentation">
-			<h2>La Bonne Note</h2>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-				been the industry's standard dummy text ever since the 1500s, when an unknown printer
-				took a galley of type and scrambled it to make a type specimen book. It has survived not
-				only five centuries, but also the leap into electronic typesetting, remaining
-				essentially unchanged. It was popularised in the 1960s with the release of Letraset
-				sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-				software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			<h2>Soutient Scolaire IUT</h2>
+			<p class="blue">Soutient Scolaire IUT est un projet
+			d'accompagnement à la scolarité d'élève de primaire dans
+			le 16ème arrondissement. Cet accompagnement est fait en
+			collaboration avec l'association ASCO 16.</p>
+			<video class="media" src="assets/video/quoi.mp4" 
+			alt="une video de présentation du projet et de l'équipe" controls></video>
 			<hr>
 			<article>
-				<h3>Pourquoi ?</h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-					Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-					unknown printer took a galley of type and scrambled it to make a type specimen
-					book. It has survived not only five centuries, but also the leap into electronic
-					typesetting, remaining essentially unchanged. It was popularised in the 1960s
-					with the release of Letraset sheets containing Lorem Ipsum passages, and more
-					recently with desktop publishing software like Aldus PageMaker including
-					versions of Lorem Ipsum.</p>
+				<h3>Pourquoi faire ?</h3>
+				<p>Vous découvrirez les valeurs de l'engagement
+				associatif :
+				<ul>
+					<li>Utiliser ses compétences pour aider
+					les plus jeunes à progresser</li>
+					<li>Développer l'estime de soi</li>
+					<li>Valoriser son engagement lors d'une
+					recherche de stage ou d'emplois</li>
+				</ul></p>
 			</article>
 			<article>
 				<h3>Comment ?</h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-					Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-					unknown printer took a galley of type and scrambled it to make a type specimen
-					book. It has survived not only five centuries, but also the leap into electronic
-					typesetting, remaining essentially unchanged. It was popularised in the 1960s
-					with the release of Letraset sheets containing Lorem Ipsum passages, and more
-					recently with desktop publishing software like Aldus PageMaker including
-					versions of Lorem Ipsum.</p>
+				<p>Chaque étudiant voulant être bénévole
+				assurera un soutien scolaire avec 1 élève (du CP
+				au CM2) les <b>lundis</b> ou <b>mardis</b> de
+				<b>16h30</b> à <b>18h00</b> </p>
 			</article>
 			<article>
 				<h3>Où ?</h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-					Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-					unknown printer took a galley of type and scrambled it to make a type specimen
-					book. It has survived not only five centuries, but also the leap into electronic
-					typesetting, remaining essentially unchanged. It was popularised in the 1960s
-					with the release of Letraset sheets containing Lorem Ipsum passages, and more
-					recently with desktop publishing software like Aldus PageMaker including
-					versions of Lorem Ipsum.</p>
+				<p>À l'école élémentaire publique d'application
+				du Parc des Princes. Avez deux salles de classes
+				mises à disposition !
+
+				C'est au 23 avenue du Parc des Princes, 16ème,
+				Paris.</p>
+				 <div id="map"></div>
+
 			</article>
 			<article>
 				<h3>Quoi ?</h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-					Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-					unknown printer took a galley of type and scrambled it to make a type specimen
-					book. It has survived not only five centuries, but also the leap into electronic
-					typesetting, remaining essentially unchanged. It was popularised in the 1960s
-					with the release of Letraset sheets containing Lorem Ipsum passages, and more
-					recently with desktop publishing software like Aldus PageMaker including
-					versions of Lorem Ipsum.</p>
+				<p>Mettre en lien des étudiants de l'IUT avec
+				des élèves de primaire pour les aider
+				scolairement.</p>
+			
 			</article>
 		</section>
 		<section id="rejoindre" class="rejoindre">
 			<h2>Nous rejoindre</h2>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-				been the industry's standard dummy text ever since the 1500s, when an unknown printer
-				took a galley of type and scrambled it to make a type specimen book. It has survived not
-				only five centuries, but also the leap into electronic typesetting, remaining
-				essentially unchanged. It was popularised in the 1960s with the release of Letraset
-				sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-				software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-			<a class="button full-color" href="rejoindre.html">Rejoindre</a>
+			<p>N'attendez plus et rejoignez nous ! On se chargera de
+			vous répondre et de veiller à bien vous informer.</p>
+			<a class="button" href="rejoindre.html">Rejoindre</a>
 		</section>
-		<section id="contact" class="contact">
+		<hr id="contact-separator">
+		<section id="contact" class="contact img-bg">
+			<div class="form-div">
 			<h2 class="full-width">Nous contacter</h2>
 			<p class="full-width">Si vous souhaitez nous contacter,
 				vous pouver le faire par ce formulaire ou via <a
@@ -156,11 +151,12 @@
 				<button type="submit" class="button full-color
 					full-width desktop-small">Envoyer</button>
 			</form>
+			</div>
 		</section>
 	</main>
 	<footer>
-		<img class="logo">
-		<p class="project-name">La Bonne Note</p>
+		<img class="logo" src="assets/svg/CrayonLea.svg" alt="Logo du projet: Une illustration d'un crayon classique">
+		<p class="project-name">Soutient Scolaire IUT</p>
 	</footer>
 
 </body>

@@ -3,9 +3,19 @@
 	--14pts: 1.5em;
 
 	--primary-color: white;
-	--accent-color: #486284;
-	--offset-color: #8ca2c0;
+
+	--rich-honey: #f79f47;
+	--glossamer-pink: #ff8f86;
+	--frozen-wave: #2aa5da;
+
+	--offset-color: #390404;
 	--separator-color: #dee5ed;
+
+	--cream: #fdfaf3;
+
+	/* --rich-honey-offset: #390404; */
+	/* --glossamer-pink-offset: ; */
+	/* --frozen-wave-offset: ; */
 }
 
 html {
@@ -30,12 +40,24 @@ h3 {
 }
 
 main {
-	margin: 2em;
 	display: flex;
 	flex-direction: column;
 	gap: 6em;
+}
 
+footer {
+	padding: 1em;
+	background-color: var(--cream);
+	text-align: center;
+}
 
+footer .logo {
+	margin: 0 auto;
+}
+
+section {
+	padding: 2em;
+	justify-content: center;
 }
 
 p {
@@ -63,9 +85,25 @@ section, .flex-wrap {
 	justify-content: space-evenly;
 }
 
+.rejoindre {
+	flex-direction: column;
+	text-align: center;
+}
+
+:is(.introduction, .rejoindre) h2 {
+	color: var(--rich-honey);
+	width: 100%;
+}
+
+#contact-separator {
+	width: 100%;
+	height: 4em;
+	background-color: #007399;
+}
+
 form {
 	justify-content: center;
-	color: var(--offset-color);
+	color: var(--frozen-wave);
 }
 
 form label {
@@ -74,7 +112,7 @@ form label {
 
 form :is(input, textarea) {
 	border-radius: 10px;
-	border: 1.5px solid var(--accent-color);
+	border: 1.5px solid var(--frozen-wave);
 	padding: 0.75em;
 }
 
@@ -87,8 +125,20 @@ form :is(input, textarea) {
 	max-width: min(100%, 35em);
 }
 
+.form-div {
+	background: white;
+	padding: 1em;
+	border: 1px solid rgba(0, 115, 153, 0.05);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 24px;
+}
+
 textarea {
 	height: 17em;
+}
+
+.img-bg {
+	background-image: url("../assets/img/squiggles.png");
 }
 
 /* Nav */
@@ -101,12 +151,18 @@ textarea {
 	padding: 1em;
 	padding-right: 0;
 	border-bottom: 2px solid var(--separator-color);
+	background: white;
+
+}
+
+.logo {
+	grid-row: 1;
+	grid-column: 1;
 
 }
 
 #header-project-name {
-	grid-row: 1;
-	grid-column: 1;
+	display: none;
 
 	color: var(--offset-color);
 	text-decoration: none;
@@ -115,6 +171,9 @@ textarea {
 #header-join-button{
 	grid-row: 1;
 	grid-column: 2;
+
+	background-color: var(--glossamer-pink);
+	border-color: var(--rich-honey);
 }
 
 #header-nav {
@@ -128,17 +187,18 @@ textarea {
 
 #header-nav a {
 	text-decoration: none;
-	color: var(--offset-color);
+	color: var(--glossamer-pink);
+
 }
 
 #header-nav a:is(:hover, :focus) {
 	text-decoration: underline;
-	color: var(--accent-color);
+	color: var(--glossamer-pink);
 }
 
 #header-nav a:visited {
 	text-decoration: underline;
-	color: var(--accent-color);
+	color: var(--glossamer-pink);
 }
 
 .burger {
@@ -149,8 +209,8 @@ textarea {
 	align-items: center;
 	justify-content: center;
 
-	fill: var(--accent-color);
-	stroke: var(--accent-color);
+	fill: var(--glossamer-pink);
+	stroke: var(--glossamer-pink);
 }
 
 .burger-lines{
@@ -174,28 +234,6 @@ textarea {
 
 }
 
-.button {
-	padding: 1em;
-
-	--radius: 50px;
-	border: 1px solid var(--accent-color);
-	border-radius: var(--radius);
-
-	--color: var(--accent-color);
-	color: var(--color);
-	font-weight: bold;
-
-	text-align: center;
-	text-decoration: none;
-
-	cursor: pointer;
-}
-
-.full-color {
-	color: var(--primary-color);
-	background-color: var(--accent-color);
-	border-color: var(--accent-color);
-}
 
 .full-width {
 	display: block;
@@ -203,13 +241,49 @@ textarea {
 	flex-basis: 100%;
 }
 
+.button {
+	padding: 0.5em;
+
+	--radius: 50px;
+	border: 1px solid var(--frozen-wave);
+	border-radius: var(--radius);
+
+	--color: var(--frozen-wave);
+	color: var(--color);
+	font-weight: bold;
+
+	text-align: center;
+	text-decoration: none;
+
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.full-color {
+	color: var(--primary-color);
+	background-color: var(--frozen-wave);
+	border-color: var(--frozen-wave);
+}
+
+
 .project-name {
 	display: inline-block;
 	font-size: var(--14pts);
+	font-family: 'Lora';
 	font-weight: bold;
+
 }
 
 /* Main page */
+
+article {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
 
 .presentation {
 	justify-content: center;
@@ -218,6 +292,14 @@ textarea {
 
 .presentation article {
 	max-width: 30em;
+}
+
+.presentation :is(h2,.blue) {
+	color: var(--frozen-wave);
+}
+
+.presentation h3 {
+	color: var(--glossamer-pink);
 }
 
 .introduction * {
@@ -233,6 +315,7 @@ textarea {
   height: 0;
 }
 
+/* Desktop specific styles are inside this mediaquery */
 @media (min-width: calc(35em * 2)) {
 	.intro-join {
 		margin-right: auto;
@@ -244,7 +327,14 @@ textarea {
 	}
 
 	#header-join-button {
-		grid-column: 3;
+		grid-column: 4;
+	}
+
+	#header-project-name {
+		grid-row: 1;
+		grid-column: 2;
+
+		display: block;
 	}
 
 	.desktop-only {
@@ -258,11 +348,12 @@ textarea {
 
 	.main-header{
 		padding-right: 1em;
+		grid-template-columns: 0.75fr 0.75fr  2fr 1fr;
 	}
 
 	#header-nav {
 		grid-row: 1;
-		grid-column: 2;
+		grid-column: 3;
 		max-height: 1000px;
 	}
 
@@ -272,6 +363,26 @@ textarea {
 	}
 }
 
+#join-main {
+	margin: 2em;
+}
+
 .section-thumbnail {
 	border-radius: 15px;
+}
+
+#map {
+	width: 80vw;
+	height: 50vh;
+
+	border: 2px solid var(--glossamer-pink);
+	border-radius: 15px;
+}
+
+.media {
+	border: 2px solid var(--rich-honey);
+	border-radius: 15px;
+
+	max-height: 100vh;
+	width: min(100%, 40em);
 }
